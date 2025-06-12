@@ -1,0 +1,332 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f9;
+  color: #444;
+}
+
+.main-header {
+  background-color: #932cf2;
+  color: #fff;
+  padding: 20px;
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+}
+
+.nav-btn.pink { background-color: #ff3c70; }
+.nav-btn.green { background-color: #49b82f; }
+.nav-btn.yellow { background-color: #f59e0b; color: #333; }
+.nav-btn.blue { background-color: #2563eb; }
+
+.player-wrapper {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.player-title {
+  text-align: center;
+  font-size: 32px;
+  color: #932cf2;
+  margin-bottom: 10px;
+  font-weight: bold;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.player-btn {
+  background-color: #ea580c;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.player-btn:hover {
+  background-color: #c2410c;
+}
+
+#video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0c3ff;
+}
+
+.play-button {
+  min-width: 100%;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: background-color 0.3s;
+  text-align: center;
+  animation: pulse 2s infinite;
+  background: transparent;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.play-button:hover {
+  filter: brightness(1.2);
+}
+
+.play-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #fbcfe8;
+}
+
+.video-embed {
+  width: 100%;
+  height: 100%;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.game-thumbnails {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.game-thumbnails .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.game-thumbnails .thumb a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.game-thumbnails .thumb:nth-child(1) a { background-color: #ffd60a; }
+.game-thumbnails .thumb:nth-child(2) a { background-color: #ff6384; }
+.game-thumbnails .thumb:nth-child(3) a { background-color: #32e875; }
+.game-thumbnails .thumb:nth-child(4) a { background-color: #4fc3f7; }
+.game-thumbnails .thumb:nth-child(5) a { background-color: #fb923c; }
+.game-thumbnails .thumb:nth-child(6) a { background-color: #8b5cf6; }
+.game-thumbnails .thumb:nth-child(7) a { background-color: #ff69b4; }
+.game-thumbnails .thumb:nth-child(8) a { background-color: #40e0d0; }
+
+.game-thumbnails .thumb a:hover {
+  transform: scale(1.05);
+}
+
+.game-description {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 15px;
+  background-color: #ffc8e1;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.game-description h2 {
+  margin-bottom: 10px;
+  color: #7b1fa2;
+  font-size: 24px;
+  text-align: center;
+}
+
+.game-description p {
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.faq {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 15px;
+  background: #f9edff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.faq h2 {
+  font-size: 26px;
+  color: #932cf2;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  animation: bounceIn 0.8s ease;
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #e91e63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.faq-item p {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  text-align: center;
+}
+
+.faq-item:nth-child(2) h3 { color: #009688; }
+.faq-item:nth-child(3) h3 { color: #3f51b5; }
+.faq-item:nth-child(4) h3 { color: #ff9800; }
+.faq-item:nth-child(5) h3 { color: #673ab7; }
+.faq-item:nth-child(6) h3 { color: #4caf50; }
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .player-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .play-button {
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  .player-title {
+    font-size: 22px;
+  }
+
+  .game-thumbnails .thumb {
+    flex: 1 1 100%;
+  }
+
+  .game-description p {
+    font-size: 15px;
+  }
+
+  .faq h2 {
+    font-size: 22px;
+  }
+
+  .faq-item h3 {
+    font-size: 18px;
+  }
+
+  .faq-item p {
+    font-size: 15px;
+  }
+}
